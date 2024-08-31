@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./build/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <title>Digitize App - Shop</title>
   </head>
   <body class="bg-gray-100">
@@ -86,7 +90,65 @@
         <!-- Product Description-->
         <div class="flex items-center justify-between w-full mb-3">
           <span class="border-y-slate-200 text-sm md:text-base">اپل</span>
-          <div>Circles</div>
+          <div x-data="{ color: red }" class="flex items-center">
+            <div
+              @click="color = 'red'"
+              :class="color === 'red' ? 'ring-2 ring-red-400' : ''"
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full curser-pointer bg-red-400 border-2 border-white"
+            >
+              <svg
+                x-show="color === 'red'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="size-4 sm:size-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'blue'"
+              :class="color === 'blue' ? 'ring-2 ring-blue-400' : ''"
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full curser-pointer bg-blue-400 -mr-1.5 border-2 border-white"
+            >
+              <svg
+                x-show="color === 'blue'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="size-4 sm:size-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+            <div
+              @click="color = 'green'"
+              :class="color === 'green' ? 'ring-2 ring-green-400' : ''"
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full curser-pointer bg-green-400 -mr-1.5 border-2 border-white"
+            >
+              <svg
+                x-show="color === 'green'"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="white"
+                class="size-4 sm:size-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
         <!-- Product Title-->
         <div class="text-slate800 text-xs font-bold mb-2 md:text-base">
@@ -112,5 +174,10 @@
       <div class="bg-blue-100">9</div>
       <div class="bg-blue-100">10</div>
     </div>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"
+    ></script>
   </body>
 </html>
