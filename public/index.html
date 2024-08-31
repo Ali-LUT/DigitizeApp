@@ -90,62 +90,70 @@
         <!-- Product Description-->
         <div class="flex items-center justify-between w-full mb-3">
           <span class="border-y-slate-200 text-sm md:text-base">اپل</span>
-          <div x-data="{ color: red }" class="flex items-center">
+          <div x-data="{ color: 'red' }" class="flex items-center">
             <div
-              @click="color = 'red'"
-              :class="color === 'red' ? 'ring-2 ring-red-400' : ''"
-              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full curser-pointer bg-red-400 border-2 border-white"
+              @click="color = 'red' "
+              :class="color === 'red' ? 'ring-2 ring-red-400' : '' "
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white ring-2 ring-red-400"
             >
               <svg
-                x-show="color === 'red'"
+                x-show="color === 'red' "
                 xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
+                fill="none"
                 viewBox="0 0 24 24"
-                fill="white"
-                class="size-4 sm:size-5"
+                stroke="currentColor"
               >
                 <path
-                  fill-rule="evenodd"
-                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
-                  clip-rule="evenodd"
-                />
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
               </svg>
             </div>
             <div
-              @click="color = 'blue'"
-              :class="color === 'blue' ? 'ring-2 ring-blue-400' : ''"
-              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full curser-pointer bg-blue-400 -mr-1.5 border-2 border-white"
+              @click="color = 'blue' "
+              :class="color === 'blue' ? 'ring-2 ring-blue-400' : '' "
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 border-2 border-white -mr-1.5"
             >
               <svg
-                x-show="color === 'blue'"
+                x-show="color === 'blue' "
                 xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
+                fill="none"
                 viewBox="0 0 24 24"
-                fill="white"
-                class="size-4 sm:size-5"
+                stroke="currentColor"
+                style="display: none"
               >
                 <path
-                  fill-rule="evenodd"
-                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
-                  clip-rule="evenodd"
-                />
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
               </svg>
             </div>
             <div
-              @click="color = 'green'"
-              :class="color === 'green' ? 'ring-2 ring-green-400' : ''"
-              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full curser-pointer bg-green-400 -mr-1.5 border-2 border-white"
+              @click="color = 'green' "
+              :class="color === 'green' ? 'ring-2 ring-green-400' : '' "
+              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 border-2 border-white -mr-1.5"
             >
               <svg
-                x-show="color === 'green'"
+                x-show="color === 'green' "
                 xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
+                fill="none"
                 viewBox="0 0 24 24"
-                fill="white"
-                class="size-4 sm:size-5"
+                stroke="currentColor"
+                style="display: none"
               >
                 <path
-                  fill-rule="evenodd"
-                  d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
-                  clip-rule="evenodd"
-                />
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
               </svg>
             </div>
           </div>
