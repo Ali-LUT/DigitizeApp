@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./build/tailwind.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
     <title>Digitize App - Shop</title>
   </head>
   <body class="bg-gray-100">
@@ -82,105 +78,113 @@
     </div>
 
     <!-- Product Section-->
-    <div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      <div class="bg-white rounded-xl p-2 shadow-md">
-        <div class="mb-3 bg-gray-100 rounded-xl p-2">
-          <img src="../assests/images/apple watch.png" alt="" />
-        </div>
-        <!-- Product Description-->
-        <div class="flex items-center justify-between w-full mb-3">
-          <span class="border-y-slate-200 text-sm md:text-base">اپل</span>
-          <div x-data="{ color: 'red' }" class="flex items-center">
-            <div
-              @click="color = 'red' "
-              :class="color === 'red' ? 'ring-2 ring-red-400' : '' "
-              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white ring-2 ring-red-400"
-            >
-              <svg
-                x-show="color === 'red' "
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+    <div
+      x-data="{ products: [
+      { id: 1, title: 'ساعت هوشمند اپل سری 6', price: ' ۱۲۳,۴۵۶,۷۸۹ تومان'  },
+      { id: 2, title: 'ساعت هوشمند اپل سری 7', price: ' ۱۲۳,۴۵۶,۷۸۹ تومان'  },
+      { id: 3, title: 'ساعت هوشمند اپل سری 8', price: ' ۱۲۳,۴۵۶,۷۸۹ تومان'  },
+      { id: 4, title: 'ساعت هوشمند اپل سری 9', price: ' ۱۲۳,۴۵۶,۷۸۹ تومان'  },
+      { id: 5, title: 'ساعت هوشمند اپل سری 10', price: ' ۱۲۳,۴۵۶,۷۸۹ تومان'  },
+      { id: 6, title: 'ساعت هوشمند اپل سری 11', price: ' ۱۲۳,۴۵۶,۷۸۹ تومان'  },
+      
+  ]}"
+      class="grid gap-x-2 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2 sm:gap-x-4 md:gap-x-8 md:gap-y-10"
+    >
+      <template x-for="product in products" :key="product.id">
+        <div class="bg-white rounded-xl p-2 shadow-md">
+          <div class="mb-3 bg-gray-100 rounded-xl p-2">
+            <img src="../assests/images/apple watch.png" alt="" />
+          </div>
+          <!-- Product Description-->
+          <div class="flex items-center justify-between w-full mb-3">
+            <span class="border-y-slate-200 text-sm md:text-base">اپل</span>
+            <div x-data="{ color: 'red' }" class="flex items-center">
+              <div
+                @click="color = 'red' "
+                :class="color === 'red' ? 'ring-2 ring-red-400' : '' "
+                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-red-400 border-2 border-white ring-2 ring-red-400"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
-            </div>
-            <div
-              @click="color = 'blue' "
-              :class="color === 'blue' ? 'ring-2 ring-blue-400' : '' "
-              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 border-2 border-white -mr-1.5"
-            >
-              <svg
-                x-show="color === 'blue' "
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                style="display: none"
+                <svg
+                  x-show="color === 'red' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                @click="color = 'blue' "
+                :class="color === 'blue' ? 'ring-2 ring-blue-400' : '' "
+                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-blue-400 border-2 border-white -mr-1.5"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
-            </div>
-            <div
-              @click="color = 'green' "
-              :class="color === 'green' ? 'ring-2 ring-green-400' : '' "
-              class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 border-2 border-white -mr-1.5"
-            >
-              <svg
-                x-show="color === 'green' "
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                style="display: none"
+                <svg
+                  x-show="color === 'blue' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  style="display: none"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <div
+                @click="color = 'green' "
+                :class="color === 'green' ? 'ring-2 ring-green-400' : '' "
+                class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer bg-green-400 border-2 border-white -mr-1.5"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
+                <svg
+                  x-show="color === 'green' "
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 sm:w-5 sm:h-5 stroke-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  style="display: none"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
             </div>
           </div>
+          <!-- Product Title-->
+          <div
+            x-text="product.title"
+            class="text-slate800 text-xs font-bold mb-2 md:text-base"
+          ></div>
+          <div
+            x-text="product.price"
+            class="text-orange-600 font-medium text-center text-sm mb-3"
+          >
+            ۱۲۳,۴۵۶,۷۸۹ تومان
+          </div>
+          <hr />
+          <button
+            class="w-full bg-red-100 font-bold text-orange-600 py-1 md:text-lg"
+          >
+            مشاهده و سفارش
+          </button>
         </div>
-        <!-- Product Title-->
-        <div class="text-slate800 text-xs font-bold mb-2 md:text-base">
-          ساعت هوشمند اپل سری 6
-        </div>
-        <div class="text-orange-600 font-medium text-center text-sm mb-3">
-          ۱۲۳,۴۵۶,۷۸۹ تومان
-        </div>
-        <hr />
-        <button
-          class="w-full bg-red-100 font-bold text-orange-600 py-1 md:text-lg"
-        >
-          مشاهده و سفارش
-        </button>
-      </div>
-      <div class="bg-blue-100">2</div>
-      <div class="bg-blue-100">3</div>
-      <div class="bg-blue-100">4</div>
-      <div class="bg-blue-100">5</div>
-      <div class="bg-blue-100">6</div>
-      <div class="bg-blue-100">7</div>
-      <div class="bg-blue-100">8</div>
-      <div class="bg-blue-100">9</div>
-      <div class="bg-blue-100">10</div>
+      </template>
     </div>
 
     <script
