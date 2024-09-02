@@ -89,6 +89,7 @@
       <!-- Sort section -->
       <div class="hidden md:block col-span-8 lg:col-span-9">
         <div
+          x-data="{sort: 1, activeClass: "text-slate-800 font-bold"}"
           class="bg-white px-4 flex items-center gap-x-4 text-gray-400 rounded-lg"
         >
           <div
@@ -109,10 +110,10 @@
               />
             </svg>
           </div>
-          <button class="py-4">محبوب ترین</button>
-          <button class="py-4">گران ترین</button>
-          <button class="py-4">ارزان ترین</button>
-          <button class="py-4">پربازدید ترین</button>
+          <button @click="sort = 1" :class=" sort === 1 ? activeClass : ''" class="py-4 relative"><span>محبوب ترین</span><span x-show="sort === 1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span></button> </button>
+          <button @click="sort = 2" :class=" sort === 2 ? activeClass : ''" class="py-4"><span>گران ترین</span><span x-show="sort === 1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span> </button>
+          <button @click="sort = 3" :class=" sort === 3 ? activeClass : ''" class="py-4"><span>ارزان ترین</span><span x-show="sort === 1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span> </button>
+          <button @click="sort = 4" :class=" sort === 4 ? activeClass : ''" class="py-4"><span>پربازدید ترین</span><span x-show="sort === 1" class="w-2 h-2 bg-orange-600 rounded-full absolute top-1 left-0"></span> </button>
         </div>
       </div>
       <!-- products section -->
