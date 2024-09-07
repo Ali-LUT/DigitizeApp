@@ -995,3 +995,8 @@ video {
     line-height: 1.75rem;
   }
 }
+@media (min-width: 1536px){
+  .\32xl\:max-w-screen-2xl{
+    max-width: 1536px;
+  }
+}
